@@ -1,0 +1,14 @@
+[Unit]
+Description=Example agent for Professor Ben
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/my-little-agent/main
+Type=simple
+User=my-little-agent
+# Group=my-little-agent
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
